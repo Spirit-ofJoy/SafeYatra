@@ -149,7 +149,7 @@
         const map = new mapboxgl.Map({
             container: 'map', // container id
             style: 'mapbox://styles/mapbox/streets-v11',
-            center: [81.86, 25.49], // starting position
+            center: [-84.47426, 38.06673], // starting position
             zoom: 11 // starting zoom
         });
 
@@ -303,6 +303,13 @@
                     }
                 });
 
+                console.log(map.addSource(`route${i}`, {
+                    type: 'geojson',
+                    data: {
+                        type: 'Feature'
+                    }
+                }))
+                
                 map.addLayer({
                     id: `route${i}`,
                     type: 'line',
@@ -319,6 +326,12 @@
                     }
                 });
             }
+
+
+            // for(let i=0; i<3;i++){
+            //     console.log(`route${i}`);
+
+            // }
         });
 
         directions.on('route', (event) => {
@@ -345,7 +358,9 @@
 
                 // Update the data for the route, updating the visual.
                 map.getSource(`route${route.id}`).setData(routeLine);
-
+                console.log(routeLine)
+                console.log(route)
+                console.log(routes)
                 const isClear = turf.booleanDisjoint(obstacle, routeLine) === true;
 
                 const collision = isClear ? 'is good!' : 'is bad.';
