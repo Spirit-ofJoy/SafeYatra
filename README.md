@@ -43,7 +43,7 @@
 <!-- Heading2(About) -->
 <p id="About"><h2><font>🔍 About This Project : </font></h2></p>
 <!-- Description -->
-<font face = "Verdana"> This Website provides traders a simplified map based platform to look for distributors who are near to them so that desired goods be supplied at a reasonable price.</font>
+<font face = "Verdana"> The aim of the project is to help pick safer routes for those travelling between locations at dull hours. Using data like Street light information, location of safe zones(eg- Hospitals, Police Stations, Petrol pumps etc.), location of precarious zones(eg- Liquor stores); the application helps predicting and picking a safer route for those avoiding unnecessary confrontations. Also includes SoS feature if faced with such situations. </font>
 
 <p id="Built">
     <h4>
