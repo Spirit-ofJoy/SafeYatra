@@ -63,11 +63,12 @@
 <!-- UI-Design -->
 <p id="UI"><h2><font>💻 User Interface Design </font></h2></p>
 <UL>
-        
+
+<li><h4> Bhopal Sample Street Light data </h4>
+<p align = center id="Sample_data"><img src = "https://github.com/Spirit-ofJoy/SafeYatra/blob/master/readme-docs/bhopal_sample.jpg"></p>
 <li><h4> content title </h4>
 <p align = center id="Login"><img src = ""></p>
-<li><h4> content title </h4>
-<p align = center id="Sign"><img src = "https://github.com/Spirit-ofJoy/Celesta/blob/master/docs/readme-images/Sign-Up%20Page%20for%20dist.PNG"></p>
+
 
 </UL>
 <!-- Features -->
