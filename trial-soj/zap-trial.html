@@ -101,7 +101,7 @@
 
   <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoiemFwMTAwMSIsImEiOiJjbDJhbzR4cngwM2JyM2NwN25sdW80NWNsIn0.ekbhe_aKhQLUL-nmF-6vTA';
-    const map = new mapboxgl.Map({
+    let map = new mapboxgl.Map({
       container: 'map', // Specify the container ID
       style: 'mapbox://styles/mapbox/light-v10', // Specify which map style to use
       center: [-84.5, 38.05], // Specify the starting position [lng, lat]
@@ -109,18 +109,18 @@
     });
 
 
-    const directions = new MapboxDirections({
+    let directions = new MapboxDirections({
       accessToken: mapboxgl.accessToken,
       unit: 'metric',
       profile: 'mapbox/driving',
-      alternatives: true,
+      alternatives: false,
       geometries: 'geojson',
       controls: { instructions: true },
       flyTo: false,
 
     });
 
-    // const geocoder = new MapboxGeocoder({
+    // let geocoder = new MapboxGeocoder({
     //   accessToken: mapboxgl.accessToken,
     //   marker: {
     //     color: 'orange'
@@ -136,7 +136,7 @@
 
     map.scrollZoom.enable();
 
-    const clearances = {
+    let clearances = {
       'type': 'FeatureCollection',
       'features': [
         {
@@ -199,7 +199,7 @@
     };
 
 
-    const clearances2 = {
+    let clearances2 = {
       'type': 'FeatureCollection',
       'features': [
         {
@@ -227,36 +227,36 @@
     };
 
 
-    const clearances3 = {
+    let clearances3 = {
       'type': 'FeatureCollection',
       'features': [
         {
           'type': 'Feature',
           'geometry': {
             'type': 'Point',
-            'coordinates': [-84.51674,38.06114]
+            'coordinates': [-84.51674, 38.06114]
           },
         },
         {
           'type': 'Feature',
           'geometry': {
             'type': 'Point',
-            'coordinates': [-84.47545,38.02768]
+            'coordinates': [-84.47545, 38.02768]
           },
         },
         {
           'type': 'Feature',
           'geometry': {
             'type': 'Point',
-            'coordinates': [-84.50309,38.04735]
+            'coordinates': [-84.50309, 38.04735]
           },
         },
       ]
     };
 
-    const obstacle = turf.buffer(clearances, 0.25, { units: 'kilometers' });
-    const obstacle2 = turf.buffer(clearances2, 0.25, { units: 'kilometers' });
-    const obstacle3 = turf.buffer(clearances3, 0.40, { units: 'kilometers' });
+    let obstacle = turf.buffer(clearances, 0.25, { units: 'kilometers' });
+    let obstacle2 = turf.buffer(clearances2, 0.25, { units: 'kilometers' });
+    let obstacle3 = turf.buffer(clearances3, 0.40, { units: 'kilometers' });
 
 
     let bbox = [0, 0, 0, 0];
@@ -355,17 +355,17 @@
     });
 
     let counter = 0;
-    const maxAttempts = 50;
+    let maxAttempts = 20;
     let emoji = '';
     let collision = '';
     let detail = '';
-    const reports = document.getElementById('reports');
+    let reports = document.getElementById('reports');
 
     function addCard(id, element, clear, detail) {
-      const card = document.createElement('div');
+      let card = document.createElement('div');
       card.className = 'card';
       // Add the response to the individual report created above
-      const heading = document.createElement('div');
+      let heading = document.createElement('div');
       // Set the class type based on clear value
       heading.className =
         clear === true
@@ -376,7 +376,7 @@
           ? `${emoji} The route ${collision}`
           : `${emoji} Route ${id} ${collision}`;
 
-      const details = document.createElement('div');
+      let details = document.createElement('div');
       details.className = 'card-details';
       details.innerHTML = `This ${detail} obstacles.`;
 
@@ -386,16 +386,16 @@
     }
 
     function noRoutes(element) {
-      const card = document.createElement('div');
+      let card = document.createElement('div');
       card.className = 'card';
       // Add the response to the individual report created above
-      const heading = document.createElement('div');
+      let heading = document.createElement('div');
       heading.className = 'card-header no-route';
       emoji = '🛑';
       heading.innerHTML = `${emoji} Ending search.`;
 
       // Add details to the individual report
-      const details = document.createElement('div');
+      let details = document.createElement('div');
       details.className = 'card-details';
       details.innerHTML = `No clear route found in ${counter} tries.`;
 
@@ -412,6 +412,11 @@
       reports.innerHTML = '';
     });
 
+    let durationcheck = 100000000;
+    let storelocation;
+    weightedvalorg = -1;
+    let x;
+
     directions.on('route', (event) => {
       // Hide the route and box by setting the opacity to zero
       map.setLayoutProperty('theRoute', 'visibility', 'none');
@@ -421,13 +426,13 @@
         noRoutes(reports);
       } else {
         // Make each route visible
-        for (const route of event.route) {
+        for (let route of event.route) {
           // Make each route visible
           map.setLayoutProperty('theRoute', 'visibility', 'visible');
           map.setLayoutProperty('theBox', 'visibility', 'visible');
 
           // Get GeoJSON LineString feature of route
-          const routeLine = polyline.toGeoJSON(route.geometry);
+          let routeLine = polyline.toGeoJSON(route.geometry);
 
           // Create a bounding box around this route
           // The app will find a random point in the new bbox
@@ -436,31 +441,43 @@
 
           // Update the data for the route
           // This will update the route line on the map
-          map.getSource('theRoute').setData(routeLine);
-
+          // map.getSource('theRoute').setData(routeLine);
+          // console.log(map.getSource('theRoute').setData(routeLine))
           // Update the box
           map.getSource('theBox').setData(polygon);
 
-          const clear = turf.booleanDisjoint(obstacle, routeLine);
-          const safe = turf.booleanIntersects(obstacle2, routeLine);
-          const safer = turf.booleanIntersects(obstacle3, routeLine);
+          let clear = turf.booleanDisjoint(obstacle, routeLine);
+          let safe = turf.booleanIntersects(obstacle2, routeLine);
+          let safer = turf.booleanIntersects(obstacle3, routeLine);
 
-          const weightedval = safe?2:0 + safer?5:0;
-          
-          if (clear == true && weightedval>=0) {
+          weightedval = safe ? 2 : 0 + safer ? 5 : 0;
+          console.log(clear)
+          console.log(safe)
+          console.log(safer)
+          console.log(weightedval)
+
+          if (clear == true && weightedval >= weightedvalorg) {
             collision = 'does not intersect any obstacles!';
             detail = `takes ${(route.duration / 60).toFixed(
               0
             )} minutes and avoids`;
             emoji = '✔️';
-            map.setPaintProperty('theRoute', 'line-color', '#74c476');
-            // Hide the box
-            map.setLayoutProperty('theBox', 'visibility', 'none');
+            x = route.duration;
+            if(x<durationcheck){
+              durationcheck = route.duration;
+              storelocation = map.getSource('theRoute').setData(routeLine);
+              
+            }
+              map.setPaintProperty('theRoute', 'line-color', '#74c476');
+              // Hide the box
+              map.setLayoutProperty('theBox', 'visibility', 'none');
             // Reset the counter
-            counter = 0;
+            counter = counter - 1;
+            weightedvalorg = weightedval
+            console.log(weightedvalorg);
           } else {
             // Collision occurred, so increment the counter
-            counter = counter + 1;
+            counter = counter - 1;
             // As the attempts increase, expand the search area
             // by a factor of the attempt count
             polygon = turf.transformScale(polygon, counter * 0.1);
@@ -473,16 +490,23 @@
             map.setPaintProperty('theRoute', 'line-color', '#de2d26');
 
             // Add a randomly selected waypoint to get a new route from the Directions API
-            const randomWaypoint = turf.randomPoint(1, { bbox: bbox });
+            let randomWaypoint = turf.randomPoint(1, { bbox: bbox });
             directions.setWaypoint(
               0,
               randomWaypoint['features'][0].geometry.coordinates
             );
           }
+          console.log(durationcheck);
+          console.log(storelocation);
+          
+          // durationcheck.sort((c1, c2) => {
+          //   return compareObjects(c1, c2, 'name')
+          // })
           // Add a new report section to the sidebar
           addCard(counter, reports, clear, detail);
         }
       }
+      storelocation;
     });
   </script>
 </body>
