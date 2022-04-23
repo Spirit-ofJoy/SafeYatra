@@ -56,26 +56,21 @@
 </p>
 <font face = "Verdana"> Following are the frameworks, libraries and languages used in this project :  <UL>
 <li><a href = "https://reactjs.org/"> React </a> 
-<li><a href = "https://expressjs.com/"> Express.js </a>
-<li><a href = "https://nodejs.org/"> Node.js </a>
 <li><a href = "https://developer.mozilla.org/en-US/docs/Web/HTML"> HTML </a>
 <li><a href = "https://developer.mozilla.org/en-US/docs/Web/CSS"> CSS </a>
-<li><a href = "https://www.mysql.com/"> MySQL </a>
+<li><a href = "https://docs.mapbox.com/"> Mapbox GL JS </a>
+<li><a href = "https://developer.tomtom.com/"> TomTom Dev API </a>
 </UL></font>
 
 <!-- UI-Design -->
 <p id="UI"><h2><font>💻 User Interface Design </font></h2></p>
 <UL>
-<li><h4> Login Page </h4>
-<p align = center id="Login"><img src = "https://github.com/Spirit-ofJoy/Celesta/blob/master/docs/readme-images/Login.PNG"></p>
-<li><h4> Sign-Up Page </h4>
+        
+<li><h4> content title </h4>
+<p align = center id="Login"><img src = ""></p>
+<li><h4> content title </h4>
 <p align = center id="Sign"><img src = "https://github.com/Spirit-ofJoy/Celesta/blob/master/docs/readme-images/Sign-Up%20Page%20for%20dist.PNG"></p>
-<li><h4> Profile Page </h4>
-<p align = center id="Profile"><img src = "https://github.com/Spirit-ofJoy/Celesta/blob/master/docs/readme-images/Profile-page.png"></p>
-<li><h4> Trader Section </h4>
-<p align = center id="Profile"><img src = "https://github.com/Spirit-ofJoy/Celesta/blob/master/docs/readme-images/trader%20section.gif"></p>
-<li><h4> Distributor Section </h4>
-<p align = center id="Profile"><img src = "https://github.com/Spirit-ofJoy/Celesta/blob/master/docs/readme-images/distributor%20section.gif"></p>
+
 </UL>
 <!-- Features -->
 <p id="Features"><h2><font>✅ Features</font></h2></p>
@@ -93,67 +88,7 @@
 <li><I> Orders Placed History </I>
 <li><I> Orders Placement </I>
 </UL>
-<!-- Installation -->
-<p id="Installation"><h2><font>🚀 Installation </font></h2></p>
-<p id="Pre"><h4><font> Pre-requisites : </font></h4></p>
-1. Make sure you have mysql, nodejs, and react-express installed.<br>
-    To install mysql, nodejs and react-express refer the following links :<br>
-    <UL type = square>
-    <li>https://nodejs.org/en/download/ (For Installing Node)
-    <li>https://react-cn.github.io/react/downloads.html (For Installing React)
-    <li>https://www.mysql.com/downloads/ (For Installing MySQL)
-    </UL>
-2. Choose a good text-editor to initiate the project( Visual studio Code is recommended).<br>
-3. Make sure that your MySQL server is set to legacy configuration to avoid errors while initiating the project.<br>
-4. Read <a href="docs/backend.md">backend.md</a> to see how to set up mysql login for the app<br>
-<p id="Front"><h4><font>Front End Initiation : </font></h4></p>
-1. You can either install the project in zip format from our github or clone the repository using the following link in your local directory : 
 
-```bash
-    git clone https://github.com/Spirit-ofJoy/Celesta.git 
-```
-<p align = center><img src = "https://github.com/Spirit-ofJoy/Celesta/blob/master/docs/readme-images/Download.gif"></p>
-
-2. After installing the project, extract it if you have preferred installing it in zip format and open the front end sub folder in Visual Studio Code( Considering that the default text editor is Visual Studio Code). Following this open a new terminal by using the following command :
-
-```shell
-    Ctrl+Shift+`
-```
-<p align = center><img src = "https://github.com/Spirit-ofJoy/Celesta/blob/master/docs/readme-images/open-folder.gif"></p>
-
-3. In the terminal run the following command to install the required node modules for front end initiation :
-
-```bash
-    npm install
-```
-<p align = center><img src = "https://github.com/Spirit-ofJoy/Celesta/blob/master/docs/readme-images/npm-install.gif"></p>
-
-4. Module installation will take 2 to 3 minutes depending upon your network connectivity. After all the required modules have been installed, run the following command to initiate the project : 
-
-```bash
-    npm start
-```
-<p align = center><img src = "https://github.com/Spirit-ofJoy/Celesta/blob/master/docs/readme-images/npm-start.gif"></p>
-
-<p id="Back" ><h4><font> Back End Initiation : </font></h4></p>
-
-1. Open the backend folder in Visual Studio Code, the same way you opened the Front End folder. Following this open a new terminal either by clicking terminal, then "New Terminal" on the top Menu Bar or run the following command : 
-
-```shell
-    Ctrl+Shift+`
-```
-
-2. In the terminal run the following command to install the required node modules for back end initiation :
-
-```bash
-    npm install
-```
-
-3. Module installation will take 2 to 3 minutes depending upon your network connectivity. After all the required modules have been installed, run the following command to initiate the project : 
-
-```bash
-    npm start
-```
 <!-- Bug and feature request -->
 <p id="Bug"><h2><font>🤝 Report a Bug / Recommend a new feature : </font></h2></p>
 Feel free to file a new issue with a respective title and description on the <a href = "https://github.com/Spirit-ofJoy/Celesta/issues"> Kraya-Anti </a> repository. If you already found a solution to your problem, we would love to review your pull request!
