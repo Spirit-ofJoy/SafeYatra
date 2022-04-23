@@ -2,6 +2,7 @@
 <h1><p align = center id="Top"><font color="cyan">SafeYatra</font></p></h1>
 
 <p align = center><font face="Helvetica" color=cyan>"Illuminating the safest routes"</font><br><br>
+<a href="https://hack36.com"> <img src="https://i.ibb.co/2sy4p5j/Built-At-Hack36.png" height=20px> </a>
 <a href="https://github.com/Spirit-ofJoy/Celesta/blob/master/LICENSE" target="_blank">
         <img src = "https://img.shields.io/badge/License-MIT-green">
 </a>
