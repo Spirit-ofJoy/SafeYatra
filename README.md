@@ -95,7 +95,7 @@ Feel free to file a new issue with a respective title and description on the <a 
 <p id="License"><h2><font>📘 License </font></h2></p>
 <font face = "Verdana"> Distributed under the MIT License. See<a href = "https://github.com/Spirit-ofJoy/Celesta/blob/master/LICENSE"> LICENSE </a>for more information.</font>
 <!-- Contributors -->
-<p id="Developers"><h2><font> Developers </font></h2></p>
+<p id="Developers"><h2><font>🕶️ Developers </font></h2></p>
 <UL>
     <li><a href = "https://github.com/Spirit-ofJoy"> Yashendu Paresh Pandey </a>
     <li><a href = "https://github.com/me-abhinav-1001"> Abhinav Anand </a>
