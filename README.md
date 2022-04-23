@@ -43,7 +43,6 @@
 
 <!-- Heading2(About) -->
 <p id="About"><h2><font>🔍 About This Project : </font></h2></p>
-<br>
 <!-- Description -->
 <font face = "Verdana"> This Website provides traders a simplified map based platform to look for distributors who are near to them so that desired goods be supplied at a reasonable price.</font>
 
@@ -74,7 +73,6 @@
 </UL>
 <!-- Features -->
 <p id="Features"><h2><font>✅ Features</font></h2></p>
-<br>
 <UL>
 <li><I> Trader/Distributor registration and login </I>
 <li><I> Manufactured/Raw Classification </I>
@@ -92,15 +90,7 @@
 <!-- Bug and feature request -->
 <p id="Bug"><h2><font>🤝 Report a Bug / Recommend a new feature : </font></h2></p>
 Feel free to file a new issue with a respective title and description on the <a href = "https://github.com/Spirit-ofJoy/Celesta/issues"> Kraya-Anti </a> repository. If you already found a solution to your problem, we would love to review your pull request!
-<!-- Contributing -->
-<p id="Contributing"><h2><font>❤️ Contributing </font></h2></p>
-Contributions are what makes the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
-1. Fork the Project
-2. Create your Feature Branch (git checkout -b feature/AmazingFeature)
-3. Commit your Changes (git commit -m 'Add some AmazingFeature')
-4. Push to the Branch (git push origin feature/AmazingFeature)
-5. Open a Pull Request
 <!-- License -->
 <p id="License"><h2><font>📘 License </font></h2></p>
 <font face = "Verdana"> Distributed under the MIT License. See<a href = "https://github.com/Spirit-ofJoy/Celesta/blob/master/LICENSE"> LICENSE </a>for more information.</font>
