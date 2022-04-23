@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Homepage.scss";
 import Navbar from "../components/Navbar/Navbar";
+import DisplayMap from "../components/Map/DisplayMap";
 import axios from "axios";
 
 function HomePage() {
@@ -41,6 +42,7 @@ function HomePage() {
   return (
     <>
       <Navbar />
+      <DisplayMap />
       <button
         className="SosButton"
         type="submit"
