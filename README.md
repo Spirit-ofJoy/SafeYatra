@@ -1,24 +1,24 @@
 <!-- Heading (Title) -->
 <h1><p align = center id="Top"><font color="cyan">SafeYatra</font></p></h1>
 
-<p align = center><font face="Helvetica" color=cyan>"Bridging the gap between Traders and Distributors"</font><br><br>
+<p align = center><font face="Helvetica" color=cyan>"Illuminating the safest routes"</font><br><br>
 <a href="https://github.com/Spirit-ofJoy/Celesta/blob/master/LICENSE" target="_blank">
         <img src = "https://img.shields.io/badge/License-MIT-green">
 </a>
 <a href="#Developers" target="_blank">
         <img src="https://img.shields.io/badge/Developers-4-cyan">
 </a>
-<a href="https://www.npmjs.com/package/npm/v/6.14.10" target="_blank">
-        <img src="https://img.shields.io/badge/npm-v6.14.10-red">
+        <br></br>
+<a href="https://www.npmjs.com/package/npm" target="_blank">
+        <img src="https://img.shields.io/badge/npm-v16.14.2-red">
+</a>
+<a href="https://docs.mapbox.com/" target="_blank">
+        <img src="https://img.shields.io/badge/mapbox-GL JS-orange">
+</a>
+<a href="https://reactjs.org/" target="_blank">
+        <img src="https://img.shields.io/badge/React-v18.0.0-blue">
 </a>
 </p>
-
-<p id="Installation"><h2><font>🚀 Deployment Status </font></h2></p>
-<UL>
-        <li>Backend: Deployed on <a href="http://kraya-anti.herokuapp.com/">http://kraya-anti.herokuapp.com/</a>
-        <li><a href="docs/Back-End Query.md">To check backend Queries - Refer this List (Back-End Query.md). Use Postman if needed</a></li>
-        <li>Frontend: Deployment in progress. Integration continues.
-</UL> 
 
 ## 📫 Idea Abstract
 <UL>
@@ -34,19 +34,8 @@
         <li> <a href="#Built"> Built With :</a>
     </UL>
 <li> <a href="#UI"> User Interface Design </a>
-    <UL type = square>
-        <li> <a href="#Login"> Login Page </a>
-        <li> <a href="#Sign"> Sign-Up Page </a>
-        <li> <a href="#Profile"> Profile Page </a>
-    </UL>
 <li> <a href="#Features"> Features </a>
-<li> <a href="#Installation"> Installation </a>
-    <UL type = square>
-        <li> <a href="#Pre"> Pre-requisites </a>
-        <li> <a href="#Front"> Front End Initiation </a>
-        <li> <a href="#Back"> Back End Initation </a>
-    </UL>
-<li> <a href="#Bug"> Bug / Feature Request </a>
+<li> <a href="#Bug"> Bug/Feature Request </a>
 <li> <a href="#Contributing"> Contributing </a>
 <li> <a href="#License"> License </a>
 <li> <a href="#Developers"> Developers </a>
@@ -73,6 +62,7 @@
 <li><a href = "https://developer.mozilla.org/en-US/docs/Web/CSS"> CSS </a>
 <li><a href = "https://www.mysql.com/"> MySQL </a>
 </UL></font>
+
 <!-- UI-Design -->
 <p id="UI"><h2><font>💻 User Interface Design </font></h2></p>
 <UL>
