@@ -74,17 +74,11 @@
 <!-- Features -->
 <p id="Features"><h2><font>✅ Features</font></h2></p>
 <UL>
-<li><I> Trader/Distributor registration and login </I>
-<li><I> Manufactured/Raw Classification </I>
-<li><I> Map Based Location </I>
-<li><I> Map API based approx. transport costs/sorting possibility </I>
-<li><I> Trader to-do list </I>
-<li><I> Filter based Item selections </I>
-<li><I> Ability for distributors to add items catalogue </I>
-<li><I> Workforce integration opportunities </I>
-<li><I> Trader based review and administrative involvement </I>
-<li><I> Orders Placed History </I>
-<li><I> Orders Placement </I>
+<li><I> Path selection for optimal safety measure </I>
+<li><I> Live Location Tracking and GPS </I>
+<li><I> API data extraction for location of safe zones </I>
+<li><I> Peer contact collection and SOS feature </I>
+
 </UL>
 
 <!-- Bug and feature request -->
