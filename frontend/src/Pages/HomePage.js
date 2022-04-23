@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Homepage.scss";
 import Navbar from "../components/Navbar/Navbar";
+import axios from "axios";
 
 function HomePage() {
   const [record, setRecord] = useState([]);
@@ -16,7 +17,26 @@ function HomePage() {
   //console.log(record);
   //console.log(record.phone1);
 
-  const handleClick = (e) => {};
+  const handleClick = (e) => {
+    try {
+      axios.post(
+        "http://localhost:8180/api/details/info?username1=" +
+          record.username1 +
+          "&phone1=" +
+          record.phone1 +
+          "&username2=" +
+          record.username2 +
+          "&phone2=" +
+          record.phone2 +
+          "&username3=" +
+          record.username3 +
+          "&phone3=" +
+          record.phone3
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <>
