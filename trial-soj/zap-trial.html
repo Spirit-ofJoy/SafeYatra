@@ -136,7 +136,7 @@
 
     map.scrollZoom.enable();
 
-    let clearances = {
+    let negatives = {
       'type': 'FeatureCollection',
       'features': [
         {
@@ -199,7 +199,7 @@
     };
 
 
-    let clearances2 = {
+    let positives = {
       'type': 'FeatureCollection',
       'features': [
         {
@@ -227,7 +227,7 @@
     };
 
 
-    let clearances3 = {
+    let positive2 = {
       'type': 'FeatureCollection',
       'features': [
         {
@@ -254,9 +254,9 @@
       ]
     };
 
-    let obstacle = turf.buffer(clearances, 0.25, { units: 'kilometers' });
-    let obstacle2 = turf.buffer(clearances2, 0.25, { units: 'kilometers' });
-    let obstacle3 = turf.buffer(clearances3, 0.40, { units: 'kilometers' });
+    let obstacle = turf.buffer(negatives, 0.25, { units: 'kilometers' });
+    let obstacle2 = turf.buffer(positives, 0.25, { units: 'kilometers' });
+    let obstacle3 = turf.buffer(positive2, 0.40, { units: 'kilometers' });
 
 
     let bbox = [0, 0, 0, 0];
@@ -408,11 +408,11 @@
       map.setLayoutProperty('theRoute', 'visibility', 'none');
       map.setLayoutProperty('theBox', 'visibility', 'none');
 
-      counter = 0;
+      // counter = 0;
       reports.innerHTML = '';
     });
 
-    let durationcheck = 100000000;
+    let durationcheck = 10000000000;
     let storelocation;
     weightedvalorg = -1;
     let x;
@@ -441,7 +441,7 @@
 
           // Update the data for the route
           // This will update the route line on the map
-          // map.getSource('theRoute').setData(routeLine);
+          map.getSource('theRoute').setData(routeLine);
           // console.log(map.getSource('theRoute').setData(routeLine))
           // Update the box
           map.getSource('theBox').setData(polygon);
@@ -450,7 +450,7 @@
           let safe = turf.booleanIntersects(obstacle2, routeLine);
           let safer = turf.booleanIntersects(obstacle3, routeLine);
 
-          weightedval = safe ? 2 : 0 + safer ? 5 : 0;
+          weightedval = (safe ? 2 : 0) + (safer ? 5 : 0);
           console.log(clear)
           console.log(safe)
           console.log(safer)
@@ -469,7 +469,7 @@
               
             }
               map.setPaintProperty('theRoute', 'line-color', '#74c476');
-              // Hide the box
+              // Hide the box+
               map.setLayoutProperty('theBox', 'visibility', 'none');
             // Reset the counter
             counter = counter - 1;
