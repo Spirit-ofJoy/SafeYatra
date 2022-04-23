@@ -36,7 +36,6 @@
 <li> <a href="#UI"> User Interface Design </a>
 <li> <a href="#Features"> Features </a>
 <li> <a href="#Bug"> Bug/Feature Request </a>
-<li> <a href="#Contributing"> Contributing </a>
 <li> <a href="#License"> License </a>
 <li> <a href="#Developers"> Developers </a>
 </UL>
@@ -75,6 +74,7 @@
 <p id="Features"><h2><font>✅ Features</font></h2></p>
 <UL>
 <li><I> Path selection for optimal safety measure </I>
+        
 <li><I> Live Location Tracking and GPS </I>
 <li><I> API data extraction for location of safe zones </I>
 <li><I> Peer contact collection and SOS feature </I>
