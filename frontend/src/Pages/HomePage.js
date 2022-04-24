@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./Homepage.scss";
 import Navbar from "../components/Navbar/Navbar";
-import DisplayMap from "../components/Map/DisplayMap";
 import axios from "axios";
+
+import { Link } from "react-router-dom";
 
 function HomePage() {
   const [record, setRecord] = useState([]);
@@ -42,12 +43,28 @@ function HomePage() {
   return (
     <>
       <Navbar />
-      <DisplayMap />
-      <button
-        className="SosButton"
-        type="submit"
-        onClick={handleClick}
-      ></button>
+      <div className="mainContainer">
+        <div className="midContainer">
+          <span className="title">SafeYatra</span>
+          <h4>You are loved!</h4>
+          <br />
+          <h5>
+            Somebody is waiting for your safe return. What a waste would it be
+            to choose the fastest way rather than the safest way. Be
+            wise!..Choose Wise!
+          </h5>
+
+          <Link className="buttonLink" to="/map">
+            <button className="forwardButton">Safe Route</button>
+          </Link>
+        </div>
+
+        <button
+          className="SosButton"
+          type="submit"
+          onClick={handleClick}
+        ></button>
+      </div>
     </>
   );
 }

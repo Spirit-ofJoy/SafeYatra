@@ -1,3 +1,26 @@
+.mainContainer{
+    background: linear-gradient(60deg, rgb(41, 101, 239) 0%, #61DAFB 100%);
+    top: 108px;
+    bottom: 0;
+    height: 90.8vh;
+    overflow: hidden;
+    overflow-y: hidden;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    .midContainer{
+      align-items: center;
+
+      background: white;
+      top: 160px ;
+      bottom: 70px;
+      height: 600px;
+      width: 900px;
+    }
+}
+
 .SosButton{
   border: 2px solid #d2bdff;
   height: 80px;
