@@ -1,57 +1,65 @@
-#navbarComponent{
-    background: #000;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Spline+Sans:wght@700&display=swap");
+
+#navbarComponent {
+    background: rgb(49, 48, 56);
     height: 60px;
     display: flex;
     justify-content: space-between;
     padding: 0.4rem calc((100vw - 1200px) / 2);
     z-index: 10;
 
-    .NavLink{
+    .NavLink {
+        font-weight: bold;
+        font-family: "Lato", sans-serif;
+        // font-family: "Spline Sans", sans-serif;
+        letter-spacing: 0.15ch;
         color: #fff;
         display: flex;
         align-items: center;
         text-decoration: none;
-        padding: 0 1rem;
+        padding: 0 1em;
         height: 100%;
         cursor: pointer;
 
-        &:hover{
+        &:hover {
             color: rgb(64, 217, 251);
         }
 
         &:active {
-          color: #60ef35;
+            color: #60ef35;
         }
     }
 
-    .logo{
+    .logo {
         font-size: 25px;
         font-style: italic;
     }
 
-    .infoSection{
+    .infoSection {
         display: flex;
         align-items: center;
         margin-right: 25px;
 
-
-        .infoButton{
-            font-size: 20px ;
+        .infoButton {
+            font-weight: bold;
+            letter-spacing: 0.1ch;
+            font-size: 20px;
             font-weight: 500;
             border-radius: 4px;
             background: #256ce1;
             padding: 10px 22px;
             color: #fff;
             outline: none;
-            border: none;
+            border: 3px solid #256ce1;
             cursor: pointer;
             transition: all 0.2s ease-in-out;
             text-decoration: none;
             margin-left: 24px;
+            border-radius: 100px;
             &:hover {
-              transition: all 0.2s ease-in-out;
-              background: #fff;
-              color: #010606;
+                transition: all 0.2s ease-in-out;
+                background: #fff;
+                color: #256ce1;
             }
         }
     }

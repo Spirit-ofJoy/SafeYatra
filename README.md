@@ -85,7 +85,7 @@
 
 <!-- Bug and feature request -->
 <p id="Bug"><h2><font>🤝 Report a Bug / Recommend a new feature : </font></h2></p>
-Feel free to file a new issue with a respective title and description on the <a href = "https://github.com/Spirit-ofJoy/Celesta/issues"> Kraya-Anti </a> repository. If you already found a solution to your problem, we would love to review your pull request!
+Feel free to file a new issue with a respective title and description on the SafeYatra repository. If you already found a solution to your problem, we would love to review your pull request!
 
 <!-- License -->
 <p id="License"><h2><font>📘 License </font></h2></p>
