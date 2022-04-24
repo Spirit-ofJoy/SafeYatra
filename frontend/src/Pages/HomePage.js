@@ -46,13 +46,19 @@ function HomePage() {
       <div className="mainContainer">
         <div className="midContainer">
           <span className="title">SafeYatra</span>
-          <h4>You are loved!</h4>
+          <h2>You are loved!</h2>
           <br />
-          <h5>
-            Somebody is waiting for your safe return. What a waste would it be
-            to choose the fastest way rather than the safest way. Be
-            wise!..Choose Wise!
-          </h5>
+          <br />
+          <h3>
+            Somebody is waiting for your safe return.
+            <br />
+            <br /> What a waste would it be to choose the fastest way rather
+            than the safest way.
+            <br />
+            <br /> Be wise!..
+            <br />
+            Choose Wise!
+          </h3>
 
           <Link className="buttonLink" to="/map">
             <button className="forwardButton">Safe Route</button>
