@@ -1,119 +1,124 @@
-.mainContainer{
-    background: linear-gradient(60deg, rgb(41, 101, 239) 0%, #61DAFB 100%);
-    top: 108px;
-    bottom: 0;
-    height: 90.65vh;
-    overflow: hidden;
-    overflow-y: hidden;
-    display: flex;
-    text-align: center;
-    justify-content: center;
+.mainContainer {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.12ch;
+  color: #ffffff;
+  background: linear-gradient(60deg, rgb(41, 101, 239) 0%, #61dafb 100%);
+  top: 108px;
+  bottom: 0;
+  height: 90.65vh;
+  overflow: hidden;
+  overflow-y: hidden;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  .midContainer {
+    padding-top: 2rem;
     align-items: center;
-    
+    border-radius: 16px;
+    border: 3px solid white;
+    background: rgba(255, 255, 255, 0.046);
+    top: 160px;
+    bottom: 70px;
+    height: 600px;
+    width: 900px;
 
-    .midContainer{
-      align-items: center;
-      border-radius: 16px;
-      border: 3px solid white;
-      background: white;
-      top: 160px ;
-      bottom: 70px;
-      height: 600px;
-      width: 900px;
-
-      .title{
-        font-size: 90px;
-        font-weight: 600;
-      }
-
-      .forwardButton {
-        margin-top: 120px;
-        min-width: 300px;
-        min-height: 60px;
-        font-size: 22px;
-        text-transform: uppercase;
-        letter-spacing: 1.3px;
-        font-weight: 700;
-        color: #020202;
-        background: #83f7eb;
-        background: linear-gradient(90deg, rgb(84, 245, 223) 0%, rgb(60, 220, 78) 100%);
-        border: none;
-        border-radius: 1000px;
-        box-shadow: 12px 12px 24px rgba(79, 209, 196, 0.222);
-        transition: all 0.3s ease-in-out 0s;
-        cursor: pointer;
-        outline: none;
-        position: relative;
-        padding: 10px;
-
-        &:hover , &:focus{
-          color: #020202;
-          transform: translateY(-6px);
-        }
-        
-        &:hover::before, &:focus::before {
-          opacity: 1;
-        }
-        &:hover::after, &:focus::after {
-          animation: none;
-          display: none;
-        }
-        
-        }
-
-        @keyframes ring {
-          0% {
-            width: 30px;
-            height: 30px;
-            opacity: 1;
-          }
-          100% {
-            width: 300px;
-            height: 300px;
-            opacity: 0;
-          }
-        }
-      
-      .forwardButton::before {
-        content: '';
-        border-radius: 1000px;
-        min-width: calc(300px + 12px);
-        min-height: calc(60px + 12px);
-        border: 6px solid #1c7d6a;
-        box-shadow: 0 0 60px rgba(0,255,203,.64);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        opacity: 0;
-        transition: all .3s ease-in-out 0s;
-      }
-      
-      
-      
-      .forwardButton::after {
-        content: '';
-        width: 30px; height: 30px;
-        border-radius: 100%;
-        border: 6px solid #00FFCB;
-        position: absolute;
-        z-index: -1;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        animation: ring 1.5s infinite;
-      }
-      
-     
-
+    .title {
+      font-size: 90px;
+      font-weight: 600;
     }
+
+    .forwardButton {
+      margin-top: 120px;
+      min-width: 300px;
+      min-height: 60px;
+      font-size: 22px;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      font-weight: 700;
+      color: #020202;
+      background: #83f7eb;
+      background: linear-gradient(
+        90deg,
+        rgb(84, 245, 223) 0%,
+        rgb(60, 220, 78) 100%
+      );
+      border: none;
+      border-radius: 1000px;
+      box-shadow: 12px 12px 24px rgba(79, 209, 196, 0.222);
+      transition: all 0.3s ease-in-out 0s;
+      cursor: pointer;
+      outline: none;
+      position: relative;
+      padding: 10px;
+
+      &:hover,
+      &:focus {
+        color: #020202;
+        transform: translateY(-6px);
+      }
+
+      &:hover::before,
+      &:focus::before {
+        opacity: 1;
+      }
+      &:hover::after,
+      &:focus::after {
+        animation: none;
+        display: none;
+      }
+    }
+
+    @keyframes ring {
+      0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+      }
+      100% {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+      }
+    }
+
+    .forwardButton::before {
+      content: "";
+      border-radius: 1000px;
+      min-width: calc(300px + 12px);
+      min-height: calc(60px + 12px);
+      border: 6px solid #1c7d6a;
+      box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: all 0.3s ease-in-out 0s;
+    }
+
+    .forwardButton::after {
+      content: "";
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      border: 6px solid #00ffcb;
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: ring 1.5s infinite;
+    }
+  }
 }
 
-.SosButton{
+.SosButton {
   border: 2px solid #d2bdff;
   height: 80px;
   width: 180px;
-  border-radius: 15px ;
+  border-radius: 150px;
   background-color: rgb(203, 30, 21);
   position: relative;
   cursor: pointer;
@@ -126,14 +131,14 @@
     content: "SOS";
     font-size: 20px;
     position: absolute;
-    top: 34%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%);
-    color: #d2bdff;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
     transition: all 0.1s linear;
   }
 
-  &::before{
+  &::before {
     content: "";
     position: relative;
     display: block;
@@ -181,7 +186,7 @@
 
     &::after {
       content: "Help On the Way";
-      top: 34%
+      // top: 34%;
     }
   }
 }
