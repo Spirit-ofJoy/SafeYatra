@@ -9,6 +9,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<HomePage />} />
         <Route exact path="/form" element={<Details />} />
+        
       </Routes>
     </Router>
   );
