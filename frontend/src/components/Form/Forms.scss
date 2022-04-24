@@ -1,107 +1,122 @@
 .form {
     width: 100vw;
     height: 100vh;
-    background:linear-gradient(270deg, rgba(138, 89, 252, 0.914) 40%, #3d3406 100%);
+    background: rgb(10, 255, 245);
+    background: linear-gradient(
+        31deg,
+        rgba(10, 255, 245, 1) 0%,
+        rgba(6, 186, 247, 1) 47%,
+        rgba(0, 99, 249, 1) 100%
+    );
     display: flex;
     align-items: center;
     justify-content: center;
-  
+
     .formWrapper {
-      width: 70%;
-      height: 70%;
-      display: flex;
-  
-      .formLeft {
-        flex: 1;
+        letter-spacing: 0.15ch;
+        width: 70%;
+        height: 70%;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-right: 25px;
-  
-        .appTitle {
-          font-size: 55px;
-          font-weight: 900;
-          color: rgb(252, 252, 252);
-          margin-bottom: 12px;
+
+        .formLeft {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: 25px;
+
+            .appTitle {
+                font-family: "Lato", sans-serif;
+                font-size: 55px;
+                font-weight: 900;
+                color: rgb(255, 255, 255);
+                margin-bottom: 12px;
+            }
+
+            .appDesc {
+                font-family: "Lato", sans-serif;
+                font-weight: 500;
+                font-size: 30px;
+
+                color: rgba(255, 255, 255, 0.918);
+            }
         }
-  
-        .appDesc {
-          font-size: 20px;
+
+        .formRight {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .formMain {
+                height: 480px;
+                padding: 25px;
+                background-color: white;
+                border-radius: 12px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .formInput {
+                    letter-spacing: 0.08ch;
+
+                    font-family: "Lato", sans-serif;
+                    height: 50px;
+                    border-radius: 12px;
+                    border: 1.2px solid rgba(128, 128, 128, 0.641);
+                    font-size: 16px;
+                    padding-left: 20px;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                .formButton {
+                    height: 50px;
+                    border-radius: 10px;
+                    border: none;
+                    background-color: #ee17b1;
+                    color: white;
+                    font-size: 20px;
+                    font-weight: 500;
+                    cursor: pointer;
+                    &:focus {
+                        outline: none;
+                    }
+
+                    &:disabled {
+                        cursor: not-allowed;
+                    }
+                }
+
+                .formText {
+                    text-align: center;
+                    color: #1775ee;
+                }
+
+                .formRedirect {
+                    width: 80%;
+                    align-self: center;
+                    height: 50px;
+                    border-radius: 10px;
+                    border: none;
+                    background-color: #42b72a;
+                    color: white;
+                    font-size: 20px;
+                    font-weight: 500;
+                    cursor: pointer;
+
+                    &:focus {
+                        outline: none;
+                    }
+
+                    .formLink {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }
         }
-      }
-  
-      .formRight {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-  
-        .formMain {
-          height: 480px;
-          padding: 25px;
-          background-color: white;
-          border-radius: 12px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-  
-          .formInput {
-            height: 50px;
-            border-radius: 12px;
-            border: 1.2px solid rgba(128, 128, 128, 0.641);
-            font-size: 16px;
-            padding-left: 20px;
-  
-            &:focus {
-              outline: none;
-            }
-          }
-  
-          .formButton {
-            height: 50px;
-            border-radius: 10px;
-            border: none;
-            background-color: #ee17b1;
-            color: white;
-            font-size: 20px;
-            font-weight: 500;
-            cursor: pointer;
-            &:focus {
-              outline: none;
-            }
-  
-            &:disabled {
-              cursor: not-allowed;
-            }
-          }
-  
-          .formText {
-            text-align: center;
-            color: #1775ee;
-          }
-  
-          .formRedirect {
-            width: 80%;
-            align-self: center;
-            height: 50px;
-            border-radius: 10px;
-            border: none;
-            background-color: #42b72a;
-            color: white;
-            font-size: 20px;
-            font-weight: 500;
-            cursor: pointer;
-  
-            &:focus {
-              outline: none;
-            }
-  
-            .formLink {
-              text-decoration: none;
-              color: white;
-            }
-          }
-        }
-      }
     }
-  }
+}
