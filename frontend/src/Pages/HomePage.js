@@ -60,9 +60,12 @@ function HomePage() {
             Choose Wise!
           </h3>
 
-          <Link className="buttonLink" to="/map">
+          <a
+            className="buttonLink"
+            href="http://127.0.0.1:5500/frontend/map_asset/map.html"
+          >
             <button className="forwardButton">Safe Route</button>
-          </Link>
+          </a>
         </div>
 
         <button
