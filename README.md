@@ -68,7 +68,7 @@
 <li><h4> Bhopal Sample Street Light data </h4>
 <p align = center id="Sample_data"><img src = "https://github.com/Spirit-ofJoy/SafeYatra/blob/master/readme-docs/bhopal_sample.jpg"></p>
 <li><h4> Form </h4>
-<p align = center ><img src = "https://github.com/Spirit-ofJoy/SafeYatra/blob/master/readme-docs/bhopal_sample.jpg"></p>
+<p align = center ><img src = "https://github.com/Spirit-ofJoy/SafeYatra/blob/master/readme-docs/form.jpg"></p>
 <li><h4> Home </h4>
 <p align = center ><img src = "https://github.com/Spirit-ofJoy/SafeYatra/blob/master/readme-docs/home.jpg"></p>
 <li><h4> Landing </h4>
