@@ -52,8 +52,8 @@ function HomePage() {
           <h3>
             Somebody is waiting for your safe return.
             <br />
-            <br /> What a waste would it be to choose the fastest way rather
-            than the safest way.
+            <br /> What a waste it would be to choose the quickest way rather
+            than the safest one.
             <br />
             <br /> Be wise!..
             <br />
