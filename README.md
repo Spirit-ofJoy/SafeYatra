@@ -24,7 +24,7 @@
 ## 📫 Idea Abstract
 <UL>
         <li><a href = "https://www.canva.com/design/DAE-vodA9xY/1huQuqWqNYtDmi_bD87WiQ/view?utm_content=DAE-vodA9xY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"> Idea Presentation </a> 
-        <li><a href = ""> Demo Video </a> 
+        <li><a href = "https://drive.google.com/file/d/1qzkpEQmFH6SWlI2F5w2qzi7yqsFG8U1v/view?usp=sharing"> Demo Video </a> 
 </UL> 
 
 <!-- Table of contents -->
